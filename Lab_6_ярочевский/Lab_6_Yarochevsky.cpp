@@ -15,11 +15,11 @@ void Info(artical *articals,int n)
 {
     for (int i = n - 1; i < n;i++)
     {
-        cout << "Íîìåð ñòàòüè - " << articals[i].Number << endl;
-        cout << "Ãîä ñòàòüè - " << articals[i].Year << endl;
-        cout << "Ôàìèëèÿ àâòîðà ñòàòüè - " << articals[i].Surname << endl;
-        cout << "Èìÿ àâòîðà ñòàòüè - " << articals[i].Name << endl;
-        cout << "Íàçâàíèå ñòàòüè - " << articals[i].TitleOfTheArticle << endl << endl;
+        cout << "ÐÐ¾Ð¼ÐµÑ€ ÑÑ‚Ð°Ñ‚ÑŒÐ¸ - " << articals[i].Number << endl;
+        cout << "Ð“Ð¾Ð´ ÑÑ‚Ð°Ñ‚ÑŒÐ¸ - " << articals[i].Year << endl;
+        cout << "Ð¤Ð°Ð¼Ð¸Ð»Ð¸Ñ Ð°Ð²Ñ‚Ð¾Ñ€Ð° ÑÑ‚Ð°Ñ‚ÑŒÐ¸ - " << articals[i].Surname << endl;
+        cout << "Ð˜Ð¼Ñ Ð°Ð²Ñ‚Ð¾Ñ€Ð° ÑÑ‚Ð°Ñ‚ÑŒÐ¸ - " << articals[i].Name << endl;
+        cout << "ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ ÑÑ‚Ð°Ñ‚ÑŒÐ¸ - " << articals[i].TitleOfTheArticle << endl << endl;
     }
 }
 
@@ -36,44 +36,44 @@ void CreateArtical(artical *articals, int n, char *nameJournal)
         articals[i].Surname = new char();
         articals[i].Name = new char();
         articals[i].TitleOfTheArticle = new char();
-        cout << "Ââåäèòå íîìåð ñòàòüè " + (i + 1) << endl;
+        cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ ÑÑ‚Ð°Ñ‚ÑŒÐ¸ " + (i + 1) << endl;
         cin >> articals[i].Number;
         while (cin.fail()) {
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
-            cout << "Îøèáêà, ïîâòîðèòå ââîä -  ";
+            cout << "ÐžÑˆÐ¸Ð±ÐºÐ°, Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´ -  ";
             cin >> articals[i].Number;
         }
-        cout << "Ââåäèòå ãîä ñòàòüè " + (i + 1) << endl;
+        cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð³Ð¾Ð´ ÑÑ‚Ð°Ñ‚ÑŒÐ¸ " + (i + 1) << endl;
         cin >> articals[i].Year;
         while (cin.fail()) {
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
-            cout << "Îøèáêà, ïîâòîðèòå ââîä -  ";
+            cout << "ÐžÑˆÐ¸Ð±ÐºÐ°, Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´ -  ";
             cin >> articals[i].Year;
         }
-        cout << "Ââåäèòå ôàìèëèþ ñòàòüè " + (i + 1) << endl;
+        cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ„Ð°Ð¼Ð¸Ð»Ð¸ÑŽ ÑÑ‚Ð°Ñ‚ÑŒÐ¸ " + (i + 1) << endl;
         cin >> articals[i].Surname;
         while (cin.fail()) {
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
-            cout << "Îøèáêà, ïîâòîðèòå ââîä -  ";
+            cout << "ÐžÑˆÐ¸Ð±ÐºÐ°, Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´ -  ";
             cin >> articals[i].Surname;
         }
-        cout << "Ââåäèòå èìÿ àâòîðà ñòàòüè " + (i + 1) << endl;
+        cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð¼Ñ Ð°Ð²Ñ‚Ð¾Ñ€Ð° ÑÑ‚Ð°Ñ‚ÑŒÐ¸ " + (i + 1) << endl;
         cin >> articals[i].Name;
         while (cin.fail()) {
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
-            cout << "Îøèáêà, ïîâòîðèòå ââîä -  ";
+            cout << "ÐžÑˆÐ¸Ð±ÐºÐ°, Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´ -  ";
             cin >> articals[i].Name;
         }
-        cout << "Ââåäèòå íàçâàíèå ñòàòüè " + (i + 1) << endl << endl;
+        cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð°Ð·Ð²Ð°Ð½Ð¸Ðµ ÑÑ‚Ð°Ñ‚ÑŒÐ¸ " + (i + 1) << endl << endl;
         cin >> articals[i].TitleOfTheArticle;
         while (cin.fail()) {
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
-            cout << "Îøèáêà, ïîâòîðèòå ââîä -  ";
+            cout << "ÐžÑˆÐ¸Ð±ÐºÐ°, Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´ -  ";
             cin >> articals[i].TitleOfTheArticle;
         }
     }
@@ -86,20 +86,20 @@ int main()
     artical* articals = new artical();
     int ValueArticals = 0;
     char* nameJournal = new char();
-    cout << "Ââåäèòå íàçâàíèå æóðíàëà" << endl;
+    cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð°Ð·Ð²Ð°Ð½Ð¸Ðµ Ð¶ÑƒÑ€Ð½Ð°Ð»Ð°" << endl;
     cin >> nameJournal;
     while (true)
     {
         int menu;
-        cout << "Âûáåðèòå ïóíêò" << endl;
-        cout << "Äîáàâèòü ñòàòüþ, íàæìèòå - 1" << endl;
-        cout << "Ðàñïå÷àòàòü èíôîðìàöèþ î ñòàòüÿõ, íàæìèòå 2" << endl;
-        cout << "Íàéòè ñòàòüè çàäàííîãî àâòîðà, íàæìèòå 3" << endl << endl;
+        cout << "Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð¿ÑƒÐ½ÐºÑ‚" << endl;
+        cout << "Ð”Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ ÑÑ‚Ð°Ñ‚ÑŒÑŽ, Ð½Ð°Ð¶Ð¼Ð¸Ñ‚Ðµ - 1" << endl;
+        cout << "Ð Ð°ÑÐ¿ÐµÑ‡Ð°Ñ‚Ð°Ñ‚ÑŒ Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸ÑŽ Ð¾ ÑÑ‚Ð°Ñ‚ÑŒÑÑ…, Ð½Ð°Ð¶Ð¼Ð¸Ñ‚Ðµ 2" << endl;
+        cout << "ÐÐ°Ð¹Ñ‚Ð¸ ÑÑ‚Ð°Ñ‚ÑŒÐ¸ Ð·Ð°Ð´Ð°Ð½Ð½Ð¾Ð³Ð¾ Ð°Ð²Ñ‚Ð¾Ñ€Ð°, Ð½Ð°Ð¶Ð¼Ð¸Ñ‚Ðµ 3" << endl << endl;
         cin >> menu;
         while (cin.fail()) {
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
-            cout << "Îøèáêà, ïîâòîðèòå ââîä -  ";
+            cout << "ÐžÑˆÐ¸Ð±ÐºÐ°, Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´ -  ";
             cin >> menu;
         }
         switch (menu)
@@ -107,12 +107,12 @@ int main()
         case 1:
         {
             int NumArt;
-            cout << "Ââåäèòå íîìåð, ïîä êîòîðûé äîáàâèòü ñòàòüþ" << endl;
+            cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€, Ð¿Ð¾Ð´ ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ð¹ Ð´Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ ÑÑ‚Ð°Ñ‚ÑŒÑŽ" << endl;
             cin >> NumArt;
             while (cin.fail()) {
                 cin.clear();
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                cout << "Îøèáêà, ïîâòîðèòå ââîä -  ";
+                cout << "ÐžÑˆÐ¸Ð±ÐºÐ°, Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´ -  ";
                 cin >> NumArt;
             }
             CreateArtical(articals, NumArt, nameJournal);
@@ -122,12 +122,12 @@ int main()
         case 2:
         {
             int n;
-            cout << "Ââåäèòå íîìåð ñòàòüè, êîòîðóþ íóæíî âûâåñòè" << endl;
+            cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ ÑÑ‚Ð°Ñ‚ÑŒÐ¸, ÐºÐ¾Ñ‚Ð¾Ñ€ÑƒÑŽ Ð½ÑƒÐ¶Ð½Ð¾ Ð²Ñ‹Ð²ÐµÑÑ‚Ð¸" << endl;
             cin >> n;
             while (cin.fail()) {
                 cin.clear();
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                cout << "Îøèáêà, ïîâòîðèòå ââîä -  ";
+                cout << "ÐžÑˆÐ¸Ð±ÐºÐ°, Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´ -  ";
                 cin >> n;
             }
             Info(articals, n);
@@ -136,24 +136,24 @@ int main()
         case 3:
         {
             int av;
-            cout << "Ñïèñîê àâòîðîâ" << endl;
+            cout << "Ð¡Ð¿Ð¸ÑÐ¾Ðº Ð°Ð²Ñ‚Ð¾Ñ€Ð¾Ð²" << endl;
             for (int i = 0; i < ValueArticals; i++)
             {
                 cout << i+1<< ". - " << articals[i].Surname << articals[i].Name << endl;
             }
-            cout << "Âûáåðèòå àâòîðà, ââåäèòå íîìåð èç ñïèñêà" << endl ;
+            cout << "Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð°Ð²Ñ‚Ð¾Ñ€Ð°, Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ Ð¸Ð· ÑÐ¿Ð¸ÑÐºÐ°" << endl ;
             cin >> av;
             while (cin.fail()) {
                 cin.clear();
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                cout << "Îøèáêà, ïîâòîðèòå ââîä -  ";
+                cout << "ÐžÑˆÐ¸Ð±ÐºÐ°, Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´ -  ";
                 cin >> av;
             }
-            cout << "Èíôîðìàöèÿ î ñòàòüÿõ äàííîãî àâòîðà" << endl << endl;
+            cout << "Ð˜Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸Ñ Ð¾ ÑÑ‚Ð°Ñ‚ÑŒÑÑ… Ð´Ð°Ð½Ð½Ð¾Ð³Ð¾ Ð°Ð²Ñ‚Ð¾Ñ€Ð°" << endl << endl;
 
-            cout << "Íîìåð ñòàòüè - " << articals[av-1].Number << endl;
-            cout << "Ãîä ñòàòüè - " << articals[av-1].Year << endl;
-            cout << "Íàçâàíèå ñòàòüè - " << articals[av-1].TitleOfTheArticle << endl << endl;
+            cout << "ÐÐ¾Ð¼ÐµÑ€ ÑÑ‚Ð°Ñ‚ÑŒÐ¸ - " << articals[av-1].Number << endl;
+            cout << "Ð“Ð¾Ð´ ÑÑ‚Ð°Ñ‚ÑŒÐ¸ - " << articals[av-1].Year << endl;
+            cout << "ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ ÑÑ‚Ð°Ñ‚ÑŒÐ¸ - " << articals[av-1].TitleOfTheArticle << endl << endl;
             break;
         }
         }
